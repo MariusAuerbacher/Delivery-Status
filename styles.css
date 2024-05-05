@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 body {
+  display: flex;
   background-image: url("https://assets.codepen.io/6060109/ZigZag.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,11 +15,12 @@ body {
 .white-float {
   background-color: white;
   height: 650px;
-  margin: 5rem auto;
+  margin: 7rem auto;
   border-radius: 0.3rem;
   box-shadow: 0px 40px 40px -20px #3c7b61;
   position: relative;
-  width: 350px;
+  width: 400px;
+ 
 }
 
 #close-button {
@@ -35,7 +37,7 @@ body {
 
 h2 {
   font-family: Montserrat;
-  margin: 20px 0 10px;
+  margin: 40px 0 30px;
   font-weight: 600;
   font-size: 22px;
   color: #2f463d;
@@ -59,6 +61,12 @@ p {
 
 .flex-container img {
   height: 80px;
+}
+
+#motorcycle-emoji,
+#hamburger-emoji {
+  height: 110px;
+  margin-bottom: 2rem;
 }
 
 .menu-price {
@@ -102,6 +110,12 @@ h6 {
   box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
 }
 
+.first-button,
+.third-button {
+  background-color: #bdbdbd;
+  margin-top: 5rem;
+}
+
 .order-button:hover {
   opacity: 0.8;
   transition: 0.3s ease all;
@@ -118,4 +132,51 @@ h6 {
 
 .bottom-dots:nth-child(2) {
   background-color: #67bd99;
+}
+
+
+.first-white-float,
+.third-white-float {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+
+  .first-white-float,
+  .third-white-float {
+    display: block;
+    z-index: 1;
+}
+
+.first-dots,
+.third-dots {
+  margin: 5rem 0.5rem;
+}
+
+.first-dots:nth-child(1),
+.third-dots:nth-child(3) {
+  background-color: #67bd99;
+} 
+
+.first-dots:nth-child(2),
+.third-dots:nth-child(2) {
+  background-color: #e0e0e0;
+} 
+
+.first-white-float {
+  margin-right: 0;
+  border-top-right-radius: 0;
+}
+
+.third-white-float {
+  margin-left: 0;
+  border-top-left-radius: 0;
+}
+
+.second-white-float {
+  margin: 5rem 0;
+  z-index: 10;
+  height: 700px;
+  width: 450px;
+}
 }
